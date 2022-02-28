@@ -1,0 +1,16 @@
+[package]
+name = "dungeoncrawl"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bracket-lib = "~0.8.1"
+legion = { version = "=0.3.1", default-features = false, features = ["wasm-bindgen", "codegen"] }
+serde = { version = "=1.0.115" }
+ron = "=0.6.1"
+getrandom = { version = "0.2", features = ["js"] }
+
+[profile.release]
+lto = "thin"
